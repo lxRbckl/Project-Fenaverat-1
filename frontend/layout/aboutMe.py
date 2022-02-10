@@ -141,17 +141,6 @@ aboutMeLayout = (
 
                                     # >
 
-                                    # tooltip <
-                                    dbc.Tooltip(
-
-                                        children = 'Updated Hourly',
-                                        target = 'languageGraphId',
-                                        placement = 'top'
-
-                                    )
-
-                                    # >
-
                                 ]
 
                             ),
@@ -203,16 +192,6 @@ aboutMeLayout = (
 
                                     # >
 
-                                    # tooltip <
-                                    dbc.Tooltip(
-
-                                        children = 'Updated Hourly',
-                                        target = 'topicGraphId',
-                                        placement = 'top'
-
-                                    )
-
-                                    # >
                                 ]
 
                             )
