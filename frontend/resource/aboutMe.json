@@ -1,0 +1,43 @@
+{
+  "imageCardStyle" : {
+    "borderRadius" : 10,
+    "border" : "2px solid rgb(17,17,17)",
+    "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "imageCardImgStyle" : {
+    "width" : 400,
+    "borderRadius" : 10
+  },
+  "biographyCardStyle" : {
+    "height" : "100%",
+    "color" : "#F8F0E3",
+    "borderRadius" : 10,
+    "border" : "2px solid rgb(17,17,17)",
+    "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "graphColStyle" : {
+    "paddingTop" : 20
+  },
+  "graphCardStyle" : {
+    "borderRadius" : 10,
+    "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "graphHeaderStyle" : {
+    "color" : "#F8F0E3"
+  },
+  "statusIndicatorColor" : "#1DB954",
+  "figureLine" : {
+    "width" : 0.5,
+    "color" : "#111111"
+  },
+  "figureColors" : "#F8F0E3",
+  "figureLayout" : {
+    "paper_bgcolor" : "#111111",
+    "margin" : {
+      "t" : 1,
+      "b" : 1,
+      "l" : 1,
+      "r" : 1
+    }
+  }
+}

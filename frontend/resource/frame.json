@@ -1,0 +1,33 @@
+{
+  "containerStyle" : {
+    "width" : "100%",
+    "height" : "100%",
+    "position" : "fixed",
+    "overflow-x" : "hidden",
+    "overflow-y" : "scroll",
+    "backgroundSize" : "cover",
+    "backgroundRepeat" : "no-repeat",
+    "backgroundAttachment" : "fixed",
+    "backgroundImage": "url(https://cdn.discordapp.com/attachments/934690396037054537/934711158924009492/background.png)"
+  },
+  "rowStyle" : {
+    "margin" : "1%",
+    "paddingTop" : 20,
+    "borderRadius" : 10,
+    "paddingBottom" : 20,
+    "border" : "2px solid rgb(17,17,17)",
+    "backgroundColor" : "rgba(17,17,17,0.5)"
+  },
+  "headerImgStyle" : {
+    "width" : 550
+  },
+  "menuImgStyle" : {
+    "height" : 40,
+    "marginTop" : "1vh"
+  },
+  "footerImgStyle" : {
+    "height" : 40,
+    "marginLeft" : "5vh",
+    "marginRight" : "5vh"
+  }
+}
