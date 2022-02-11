@@ -64,6 +64,7 @@ def scrapeMyProject(user: str) -> None:
 
                     myProjectData[user]['project'][title] = {
 
+                        'link' : f'https://github.com/{user}/{title}',
                         'description' : description,
                         'hide' : False,
                         'feed' : {}

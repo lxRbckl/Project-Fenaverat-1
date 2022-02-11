@@ -7,6 +7,7 @@ from frontend.layout.frame import bodyLayout
 
 # >
 
+from backend.scrape import scrapeMyProject, scrapeAboutMe # remove
 
 # main <
 if (__name__ == '__main__'):

@@ -110,11 +110,115 @@ def myProjectFunction(title: str, data: dict):
             style = myProjectStyle['cardStyle'],
             children = [
 
+                # header <
                 dbc.CardHeader(
 
-                    html.H4(title.replace('-', ' '))
+                    style = myProjectStyle['cardChildrenStyle'],
+                    children = [
+
+                        # title <
+                        # description <
+                        html.H4(title.replace('-', ' ')),
+                        html.Small(
+
+                            children = html.Small(data[title]['description'])
+
+                        ),
+
+                        # >
+
+                        html.Hr()
+
+                    ]
+
+                ),
+
+                # >
+
+                # body <
+                dbc.CardBody(
+
+                    style = myProjectStyle['cardChildrenStyle'],
+                    children = [
+
+
+
+                    ]
+
+                ),
+
+                # >
+
+                # footer <
+                dbc.CardFooter(
+
+                    style = myProjectStyle['cardChildrenStyle'],
+                    children = [
+
+                        html.Hr(),
+
+                        dbc.Row(
+
+                            justify = 'between',
+                            children = [
+
+                                # feed <
+                                dbc.Col(
+
+                                    width = 'auto',
+                                    children = [
+
+                                        dbc.CardLink(
+
+                                            href = f'/{title}',
+                                            style = myProjectStyle['footerCardLinkStyle'],
+                                            children = '{} ⇾'.format(title.replace('-', ' '))
+
+                                        )
+
+                                    ]
+
+                                ),
+
+                                # >
+
+                                # link <
+                                dbc.Col(
+
+                                    width = 'auto',
+                                    children = [
+
+                                        html.A(
+
+                                            href = data[title]['link'],
+                                            children = [
+
+                                                html.Img(
+
+                                                    src = myProjectStyle['linkImgSrc'],
+                                                    style = myProjectStyle['linkImgStyle']
+
+                                                )
+
+                                            ]
+
+                                        )
+
+                                    ]
+
+                                )
+
+                                # >
+
+                            ]
+
+                        )
+
+                    ]
 
                 )
+
+                # >
 
             ]
 

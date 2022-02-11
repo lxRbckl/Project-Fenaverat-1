@@ -1,8 +1,8 @@
 # import <
 from dash import html, dcc
 import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output
 from frontend.layout.aboutMe import aboutMeLayout
+from dash.dependencies import Input, Output, State
 from frontend.layout.myServer import myServerLayout
 from frontend.layout.myProject import myProjectLayout
 from backend.utility import application, jsonLoad, jsonDump
@@ -154,6 +154,8 @@ bodyLayout = dbc.Container(
 def frameCallback(path: str):
     '''  '''
 
+    print(path) # remove
+
     # local <
     layoutDict = {
 
@@ -165,8 +167,12 @@ def frameCallback(path: str):
 
     # >
 
-    # output <
-    return layoutDict[path]
+    # if (page) <
+    # else (feed) <
+    if (path in layoutDict.keys()): return layoutDict[path]
+    else:
+
+        pass
 
     # >
 
