@@ -60,6 +60,8 @@ def myProjectCallback(*args):
     queue = [title for user in myProjectData for title in myProjectData[user]['queue']]
     queue = [title for title in queue if (title in data.keys())]
 
+    # >
+
     # build board from queue <
     [board[c % len(board)].append(title) for c, title in enumerate(queue)]
 
@@ -71,7 +73,7 @@ def myProjectCallback(*args):
         # iterate (col) <
         [
 
-            # build col <
+            # iterate (title) <
             dbc.Col(
 
                 children = [
