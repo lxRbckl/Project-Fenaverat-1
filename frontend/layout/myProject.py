@@ -41,16 +41,26 @@ def myProjectCallback(*args):
     '''  '''
 
     # local <
-    queue, board = [], ([], [], [])
+    board = ([], [], [])
     aboutMeData = jsonLoad(file = '/frontend/data/aboutMe.json')
     myProjectData = jsonLoad(file = '/frontend/data/myProject.json')
-    style = jsonLoad(file = '/frontend/resource/myProject.json')
+    myProjectStyle = jsonLoad(file = '/frontend/resource/myProject.json')
+
+    # >
+
+    # build data <
+    # filter data <
+    data = {t : f for u in myProjectData.keys() for t, f in myProjectData[u]['project'].items()}
+    data = {t : f for t, f in data.items() if (f['hide'] is False)}
 
     # >
 
     # build queue from data <
+    # filter queue <
+    queue = [title for user in myProjectData for title in myProjectData[user]['queue']]
+    queue = [title for title in queue if (title in data.keys())]
+
     # build board from queue <
-    [queue.extend(myProjectData[user]['queue']) for user in aboutMeData['users']]
     [board[c % len(board)].append(title) for c, title in enumerate(queue)]
 
     # >
@@ -64,10 +74,9 @@ def myProjectCallback(*args):
             # build col <
             dbc.Col(
 
-                align = 'center',
                 children = [
 
-                    myProjectFunction(title = title, data = myProjectData)
+                    myProjectFunction(title = title, data = data)
 
                 for title in col]
 
@@ -87,13 +96,32 @@ def myProjectCallback(*args):
 
 
 # function <
-def myProjectFunction(title, data):
+def myProjectFunction(title: str, data: dict):
     '''  '''
 
+    # output <
     return (
 
-        html.H1(title)
+        # card <
+        dbc.Card(
+
+            style = myProjectStyle['cardStyle'],
+            children = [
+
+                dbc.CardHeader(
+
+                    html.H4(title.replace('-', ' '))
+
+                )
+
+            ]
+
+        )
+
+        # >
 
     )
+
+    # >
 
 # >

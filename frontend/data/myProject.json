@@ -17,7 +17,7 @@
       "project": {
          "ala2q6": {
             "description": "Config files for my GitHub profile.",
-            "hide": false,
+            "hide": true,
             "feed": {}
          },
          "CS461P3": {
@@ -114,7 +114,7 @@
          },
          "lxRbckl": {
             "description": "Config files for my GitHub profile.",
-            "hide": false,
+            "hide": true,
             "feed": {}
          },
          "Project-Ubittas": {

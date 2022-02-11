@@ -256,12 +256,12 @@ def aboutMeCallback(*args):
 
 
 # function <
-def aboutMeFunction(*args):
+def aboutMeFunction(data: list):
     '''  '''
 
     # iterate (arg) <
     dictVariable = {}
-    for i in args[0]:
+    for i in data:
 
         # if (element in dict then increment) <
         # else (element not in dict then initialize) <

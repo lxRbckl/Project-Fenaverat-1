@@ -151,7 +151,7 @@ bodyLayout = dbc.Container(
 # callback <
 @application.callback(Output('bodyRowId', 'children'),
                       Input('frameLocationId', 'pathname'))
-def frameCallback(*args):
+def frameCallback(path: str):
     '''  '''
 
     # local <
@@ -166,7 +166,7 @@ def frameCallback(*args):
     # >
 
     # output <
-    return layoutDict[args[0]]
+    return layoutDict[path]
 
     # >
 
