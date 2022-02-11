@@ -93,7 +93,7 @@ bodyLayout = dbc.Container(
 
             id = 'bodyRowId',
             justify = 'center',
-            style = bodyStyle['rowStyle']
+            style = bodyStyle['bodyRowStyle']
 
         ),
 
@@ -149,7 +149,8 @@ bodyLayout = dbc.Container(
 
 
 # callback <
-@application.callback(Output('bodyRowId', 'children'),
+@application.callback(Output('bodyRowId', 'style'),
+                      Output('bodyRowId', 'children'),
                       Input('frameLocationId', 'pathname'))
 def frameCallback(path: str):
     '''  '''
@@ -159,9 +160,10 @@ def frameCallback(path: str):
     # local <
     layoutDict = {
 
-        '/aboutMe' : aboutMeLayout,
-        '/myServer' : myServerLayout,
-        '/myProject' : myProjectLayout
+        '/' : (bodyStyle['rowStyle'], aboutMeLayout),
+        '/aboutMe' : (bodyStyle['rowStyle'], aboutMeLayout),
+        '/myServer' : (bodyStyle['bodyRowStyle'], myServerLayout),
+        '/myProject' : (bodyStyle['bodyRowStyle'], myProjectLayout)
 
     }
 
@@ -172,7 +174,7 @@ def frameCallback(path: str):
     if (path in layoutDict.keys()): return layoutDict[path]
     else:
 
-        pass
+        return None
 
     # >
 

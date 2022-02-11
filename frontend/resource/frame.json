@@ -25,6 +25,12 @@
     "height" : 40,
     "marginTop" : "1vh"
   },
+  "bodyRowStyle" : {
+    "margin" : "1%",
+    "borderRadius" : 10,
+    "border" : "2px solid rgb(17,17,17)",
+    "backgroundColor" : "rgba(17,17,17,0.5)"
+  },
   "footerImgStyle" : {
     "height" : 40,
     "marginLeft" : "5vh",

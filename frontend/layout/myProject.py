@@ -57,8 +57,8 @@ def myProjectCallback(*args):
 
     # build queue from data <
     # filter queue <
-    queue = [title for user in myProjectData for title in myProjectData[user]['queue']]
-    queue = [title for title in queue if (title in data.keys())]
+    queue = [title for user in myProjectData for title in myProjectData[user]['queue'][::-1]]
+    queue = [title for title in queue if (title in data.keys())][::-1]
 
     # >
 
