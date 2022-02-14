@@ -1,5 +1,6 @@
 {
   "imageCardStyle" : {
+    "marginTop" : 2,
     "borderRadius" : 10,
     "border" : "2px solid rgb(17,17,17)",
     "backgroundColor" : "rgba(17,17,17,1)"
@@ -9,6 +10,7 @@
     "borderRadius" : 10
   },
   "biographyCardStyle" : {
+    "marginTop" : 2,
     "height" : "100%",
     "color" : "#F8F0E3",
     "borderRadius" : 10,

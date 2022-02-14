@@ -3,7 +3,7 @@ from os import listdir
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from backend.utility import application, jsonLoad, jsonDump, realpath
+from backend.utility import application, jsonLoad, realpath
 
 # >
 
@@ -22,8 +22,8 @@ myProjectLayout = (
     # board <
     dbc.Row(
 
-        id = 'boardRowId',
-        justify = 'center'
+        justify = 'center',
+        id = 'myProjectBoardRowId'
 
     )
 
@@ -35,13 +35,12 @@ myProjectLayout = (
 
 
 # callback <
-@application.callback(Output('boardRowId', 'children'),
-                      Input('boardRowId', 'children'))
+@application.callback(Output('myProjectBoardRowId', 'children'),
+                      Input('myProjectBoardRowId', 'children'))
 def myProjectCallback(*args):
     '''  '''
 
     # local <
-    board = ([], [], [])
     myProjectData = jsonLoad(file = '/frontend/data/myProject.json')
     path = '/'.join(realpath.split('/')[:-2]) + '/frontend/data/feed'
     feed = {t : jsonLoad(f'/frontend/data/feed/{t}') for t in listdir(path)}
@@ -63,6 +62,7 @@ def myProjectCallback(*args):
     # >
 
     # build board from queue <
+    board = ([], [], [])
     [board[c % len(board)].append(title) for c, title in enumerate(queue)]
 
     # >
