@@ -9,9 +9,17 @@
     "color" : "#F8F0E3",
     "backgroundColor" : "rgba(17,17,17,1)"
   },
-  "bodyBadgeColor" : "#",
+  "cardHrStyle" : {
+    "marginTop" : 0,
+    "marginLeft" : 15,
+    "marginRight" : 15,
+    "marginBottom" : 0,
+    "color" : "#F8F0E3"
+  },
+  "bodyBadgeColor" : "#F8F0E3",
   "bodyBadgeStyle" : {
-    "backgroundColor" : "#111111"
+    "marginBottom" : 4,
+    "color" : "#111111"
   },
   "linkImgSrc" : "https://cdn.discordapp.com/attachments/934690396037054537/941726647491645490/github.png",
   "linkImgStyle" : {

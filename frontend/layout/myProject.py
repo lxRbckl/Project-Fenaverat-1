@@ -114,7 +114,9 @@ def myProjectFunction(title: str, projectData: dict, feedData: dict):
 
                 # >
 
-                # <
+                html.Hr(style = myProjectStyle['cardHrStyle']),
+
+                # body <
                 dbc.CardBody(
 
                     style = myProjectStyle['cardChildrenStyle'],
@@ -123,6 +125,8 @@ def myProjectFunction(title: str, projectData: dict, feedData: dict):
                 ),
 
                 # >
+
+                html.Hr(style = myProjectStyle['cardHrStyle']),
 
                 # footer <
                 dbc.CardFooter(
@@ -154,11 +158,9 @@ def cardHeaderFunction(title: str, projectData: dict, feedData: dict):
         # title <
         # description <
         html.H4(title.replace('-', ' ')),
-        html.Small(html.Small(projectData[title]['description'])),
+        html.Small(html.Small(projectData[title]['description']))
 
         # >
-
-        html.Hr()
 
     )
 
@@ -168,12 +170,26 @@ def cardHeaderFunction(title: str, projectData: dict, feedData: dict):
 def cardBodyFunction(title: str, projectData: dict, feedData: dict):
     '''  '''
 
-    # output <
-    return (
+    # if (empty) <
+    try:
 
-        #
+        # output <
+        return [
 
-    )
+            dbc.Badge(
+
+                children = subject,
+                color = myProjectStyle['bodyBadgeColor'],
+                style = myProjectStyle['bodyBadgeStyle']
+
+            )
+
+        for subject in feedData[f'{title}.json'].keys()]
+
+    # >
+
+    # else (not empty) <
+    except KeyError: return None
 
     # >
 
@@ -183,8 +199,6 @@ def cardFooterFunction(title: str, projectData: dict, feedData: dict):
 
     # output <
     return (
-
-        html.Hr(),
 
         dbc.Row(
 
