@@ -16,76 +16,64 @@
       ],
       "project": {
          "ala2q6": {
-            "link": "https://github.com/ala2q6/ala2q6",
-            "description": "Config files for my GitHub profile.",
             "hide": true,
-            "feed": {}
+            "description": "Config files for my GitHub profile.",
+            "link": "https://github.com/ala2q6/ala2q6"
          },
          "CS461P3": {
-            "link": "https://github.com/ala2q6/CS461P3",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS461: Project 3",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS461P3"
          },
          "CS461P2": {
-            "link": "https://github.com/ala2q6/CS461P2",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS461: Project 2",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS461P2"
          },
          "CS461P1": {
-            "link": "https://github.com/ala2q6/CS461P1",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS461: Project 1",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS461P1"
          },
          "CS441P2": {
-            "link": "https://github.com/ala2q6/CS441P2",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS441: Project 2",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS441P2"
          },
          "CS201RP5": {
-            "link": "https://github.com/ala2q6/CS201RP5",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS201R: Project 5",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS201RP5"
          },
          "CS201RP4": {
-            "link": "https://github.com/ala2q6/CS201RP4",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS201R: Project 4",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS201RP4"
          },
          "CS201RP2": {
-            "link": "https://github.com/ala2q6/CS201RP2",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS201R: Project 2",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS201RP2"
          },
          "CS201RP1": {
-            "link": "https://github.com/ala2q6/CS201RP1",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS201R: Project 1",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS201RP1"
          },
          "CS201RP3": {
-            "link": "https://github.com/ala2q6/CS201RP3",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS201R: Project 3",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS201RP3"
          },
          "CS303P1": {
-            "link": "https://github.com/ala2q6/CS303P1",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS303: Project 1",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS303P1"
          },
          "CS303P2": {
-            "link": "https://github.com/ala2q6/CS303P2",
+            "hide": true,
             "description": "University of Missouri - Kansas City: CS303: Project 2",
-            "hide": false,
-            "feed": {}
+            "link": "https://github.com/ala2q6/CS303P2"
          }
       }
    },
@@ -114,124 +102,104 @@
       ],
       "project": {
          "Project-UMKC-2": {
-            "link": "https://github.com/lxRbckl/Project-UMKC-2",
-            "description": "Receive a Discord notification when your Zoom classes start. Fall 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Receive a Discord notification when your Zoom classes start. Fall 2021.",
+            "link": "https://github.com/lxRbckl/Project-UMKC-2"
          },
          "Project-Maximus": {
-            "link": "https://github.com/lxRbckl/Project-Maximus",
-            "description": "Get the live feed of a USB camera and interact with GPIO pins with a Plotly and Dash UI with a Raspberry Pi. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Get the live feed of a USB camera and interact with GPIO pins with a Plotly and Dash UI with a Raspberry Pi. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-Maximus"
          },
          "lxRbckl": {
-            "link": "https://github.com/lxRbckl/lxRbckl",
-            "description": "Config files for my GitHub profile.",
             "hide": true,
-            "feed": {}
+            "description": "Config files for my GitHub profile.",
+            "link": "https://github.com/lxRbckl/lxRbckl"
          },
          "Project-Ubittas": {
-            "link": "https://github.com/lxRbckl/Project-Ubittas",
-            "description": "Fix Caps Lock delay on Ubuntu 20.04. Spring 2022.",
             "hide": false,
-            "feed": {}
+            "description": "Fix Caps Lock delay on Ubuntu 20.04. Spring 2022.",
+            "link": "https://github.com/lxRbckl/Project-Ubittas"
          },
          "Project-Comperio": {
-            "link": "https://github.com/lxRbckl/Project-Comperio",
-            "description": "Conceptualize Instagram followers and their relationship to one another. Spring 2020.",
             "hide": false,
-            "feed": {}
+            "description": "Conceptualize Instagram followers and their relationship to one another. Spring 2020.",
+            "link": "https://github.com/lxRbckl/Project-Comperio"
          },
          "Project-WS3K": {
-            "link": "https://github.com/lxRbckl/Project-WS3K",
-            "description": "Receive a notification when a Discord user begins typing in a Discord server. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Receive a notification when a Discord user begins typing in a Discord server. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-WS3K"
          },
          "Project-Jordyn": {
-            "link": "https://github.com/lxRbckl/Project-Jordyn",
-            "description": "Get choices made for you with a Discord bot. Fall 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Get choices made for you with a Discord bot. Fall 2021.",
+            "link": "https://github.com/lxRbckl/Project-Jordyn"
          },
          "Project-Serra": {
-            "link": "https://github.com/lxRbckl/Project-Serra",
-            "description": "Monitor daily consumption with a Discord bot and visualize it with Plotly and Dash. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Monitor daily consumption with a Discord bot and visualize it with Plotly and Dash. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-Serra"
          },
          "Project-Panavia": {
-            "link": "https://github.com/lxRbckl/Project-Panavia",
-            "description": "Model data for visual ballistics on roulette wheels and visualize it with Plotly and Dash. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Model data for visual ballistics on roulette wheels and visualize it with Plotly and Dash. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-Panavia"
          },
          "Project-Acta-Mea": {
-            "link": "https://github.com/lxRbckl/Project-Acta-Mea",
-            "description": "Add a layer of abstraction between you and Discord servers with a Discord bot. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Add a layer of abstraction between you and Discord servers with a Discord bot. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-Acta-Mea"
          },
          "Project-TeneT": {
-            "link": "https://github.com/lxRbckl/Project-TeneT",
-            "description": "A reverse Monte Carlo building simulation for visual ballistics on roulette wheels with RRS systems. Fall 2021.",
             "hide": false,
-            "feed": {}
+            "description": "A reverse Monte Carlo building simulation for visual ballistics on roulette wheels with RRS systems. Fall 2021.",
+            "link": "https://github.com/lxRbckl/Project-TeneT"
          },
          "Project-Borg": {
-            "link": "https://github.com/lxRbckl/Project-Borg",
-            "description": "Highlight the data of biased roullette wheels and visualize it with MatPlotLib. Spring 2019.",
             "hide": false,
-            "feed": {}
+            "description": "Highlight the data of biased roullette wheels and visualize it with MatPlotLib. Spring 2019.",
+            "link": "https://github.com/lxRbckl/Project-Borg"
          },
          "Project-Domum": {
-            "link": "https://github.com/lxRbckl/Project-Domum",
-            "description": "Control an arbitrary amount of GPIO pins with a Discord bot. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Control an arbitrary amount of GPIO pins with a Discord bot. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-Domum"
          },
          "Project-PasCam-6": {
-            "link": "https://github.com/lxRbckl/Project-PasCam-6",
-            "description": "Camouflage your passwords with a Discord bot. Fall 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Camouflage your passwords with a Discord bot. Fall 2021.",
+            "link": "https://github.com/lxRbckl/Project-PasCam-6"
          },
          "Project-PasCam-5": {
-            "link": "https://github.com/lxRbckl/Project-PasCam-5",
-            "description": "Camouflage your passwords with a Discord bot. Share function added. Spring 2021.",
             "hide": false,
-            "feed": {}
+            "description": "Camouflage your passwords with a Discord bot. Share function added. Spring 2021.",
+            "link": "https://github.com/lxRbckl/Project-PasCam-5"
          },
          "Project-PasCam-4": {
-            "link": "https://github.com/lxRbckl/Project-PasCam-4",
-            "description": "Camouflage your passwords with a Discord bot. Show function added. Fall 2020.",
             "hide": false,
-            "feed": {}
+            "description": "Camouflage your passwords with a Discord bot. Show function added. Fall 2020.",
+            "link": "https://github.com/lxRbckl/Project-PasCam-4"
          },
          "Project-UMKC-1": {
-            "link": "https://github.com/lxRbckl/Project-UMKC-1",
-            "description": "Receive a Discord notification when your Zoom classes start. Fall 2020.",
             "hide": false,
-            "feed": {}
+            "description": "Receive a Discord notification when your Zoom classes start. Fall 2020.",
+            "link": "https://github.com/lxRbckl/Project-UMKC-1"
          },
          "Project-PasCam-3": {
-            "link": "https://github.com/lxRbckl/Project-PasCam-3",
-            "description": "Camouflage your passwords. Increased security. Copy feature added. Spring 2020.",
             "hide": false,
-            "feed": {}
+            "description": "Camouflage your passwords. Increased security. Copy feature added. Spring 2020.",
+            "link": "https://github.com/lxRbckl/Project-PasCam-3"
          },
          "Project-PasCam-2": {
-            "link": "https://github.com/lxRbckl/Project-PasCam-2",
-            "description": "Camouflage your passwords. Increased security. Fall 2019.",
             "hide": false,
-            "feed": {}
+            "description": "Camouflage your passwords. Increased security. Fall 2019.",
+            "link": "https://github.com/lxRbckl/Project-PasCam-2"
          },
          "Project-PasCam-1": {
-            "link": "https://github.com/lxRbckl/Project-PasCam-1",
-            "description": "Camouflage your passwords. Spring 2019.",
             "hide": false,
-            "feed": {}
+            "description": "Camouflage your passwords. Spring 2019.",
+            "link": "https://github.com/lxRbckl/Project-PasCam-1"
          }
       }
    }

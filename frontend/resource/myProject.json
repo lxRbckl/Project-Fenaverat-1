@@ -9,6 +9,10 @@
     "color" : "#F8F0E3",
     "backgroundColor" : "rgba(17,17,17,1)"
   },
+  "bodyBadgeColor" : "#",
+  "bodyBadgeStyle" : {
+    "backgroundColor" : "#111111"
+  },
   "linkImgSrc" : "https://cdn.discordapp.com/attachments/934690396037054537/941726647491645490/github.png",
   "linkImgStyle" : {
     "height" : "20px"

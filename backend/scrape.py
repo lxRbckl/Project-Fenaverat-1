@@ -1,4 +1,5 @@
 # import <
+from time import sleep
 from selenium import webdriver
 from backend.utility import jsonLoad, jsonDump
 from selenium.webdriver.chrome.options import Options
@@ -25,13 +26,8 @@ def scrapeMyProject(user: str) -> None:
     # add user to dictionary <
     if (user not in myProjectData.keys()): myProjectData[user] = {
 
-        'queue' : [
-
-        ],
-
-        'project' : {
-
-        }
+        'queue' : [],
+        'project' : {}
 
     }
 
@@ -62,14 +58,18 @@ def scrapeMyProject(user: str) -> None:
                 # if (new project) <
                 if (title not in myProjectData[user]['project'].keys()):
 
+                    # add feed to data <
+                    # add project to data <
+                    jsonDump(file = f'/frontend/data/feed/{title}.json', data = {})
                     myProjectData[user]['project'][title] = {
 
-                        'link' : f'https://github.com/{user}/{title}',
-                        'description' : description,
                         'hide' : False,
-                        'feed' : {}
+                        'description' : description,
+                        'link' : f'https://github.com/{user}/{title}'
 
                     }
+
+                    # >
 
                 # >
 
@@ -128,6 +128,7 @@ def scrapeAboutMe(user: str) -> None:
 
         # to website <
         driver.get(setting['website'].replace('<>', user) + project)
+        sleep(5)
 
         # >
 

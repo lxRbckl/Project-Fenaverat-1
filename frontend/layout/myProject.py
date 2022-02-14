@@ -1,9 +1,9 @@
 # import <
+from os import listdir
 from dash import html, dcc
-import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from backend.utility import application, jsonLoad, jsonDump
+from backend.utility import application, jsonLoad, jsonDump, realpath
 
 # >
 
@@ -42,23 +42,23 @@ def myProjectCallback(*args):
 
     # local <
     board = ([], [], [])
-    aboutMeData = jsonLoad(file = '/frontend/data/aboutMe.json')
     myProjectData = jsonLoad(file = '/frontend/data/myProject.json')
-    myProjectStyle = jsonLoad(file = '/frontend/resource/myProject.json')
+    path = '/'.join(realpath.split('/')[:-2]) + '/frontend/data/feed'
+    feed = {t : jsonLoad(f'/frontend/data/feed/{t}') for t in listdir(path)}
 
     # >
 
     # build data <
     # filter data <
-    data = {t : f for u in myProjectData.keys() for t, f in myProjectData[u]['project'].items()}
-    data = {t : f for t, f in data.items() if (f['hide'] is False)}
+    project = {t : f for u in myProjectData.keys() for t, f in myProjectData[u]['project'].items()}
+    project = {t : f for t, f in project.items() if (f['hide'] is False)}
 
     # >
 
     # build queue from data <
     # filter queue <
     queue = [title for user in myProjectData for title in myProjectData[user]['queue'][::-1]]
-    queue = [title for title in queue if (title in data.keys())][::-1]
+    queue = [title for title in queue if (title in project.keys())][::-1]
 
     # >
 
@@ -70,25 +70,19 @@ def myProjectCallback(*args):
     # output <
     return (
 
-        # iterate (col) <
         [
 
-            # iterate (title) <
             dbc.Col(
 
                 children = [
 
-                    myProjectFunction(title = title, data = data)
+                    myProjectFunction(title = title, projectData = project, feedData = feed)
 
                 for title in col]
 
             )
 
-            # >
-
         for col in board]
-
-        # >
 
     )
 
@@ -98,7 +92,7 @@ def myProjectCallback(*args):
 
 
 # function <
-def myProjectFunction(title: str, data: dict):
+def myProjectFunction(title: str, projectData: dict, feedData: dict):
     '''  '''
 
     # output <
@@ -114,36 +108,17 @@ def myProjectFunction(title: str, data: dict):
                 dbc.CardHeader(
 
                     style = myProjectStyle['cardChildrenStyle'],
-                    children = [
-
-                        # title <
-                        # description <
-                        html.H4(title.replace('-', ' ')),
-                        html.Small(
-
-                            children = html.Small(data[title]['description'])
-
-                        ),
-
-                        # >
-
-                        html.Hr()
-
-                    ]
+                    children = cardHeaderFunction(title, projectData, feedData)
 
                 ),
 
                 # >
 
-                # body <
+                # <
                 dbc.CardBody(
 
                     style = myProjectStyle['cardChildrenStyle'],
-                    children = [
-
-
-
-                    ]
+                    children = cardBodyFunction(title, projectData, feedData)
 
                 ),
 
@@ -153,62 +128,106 @@ def myProjectFunction(title: str, data: dict):
                 dbc.CardFooter(
 
                     style = myProjectStyle['cardChildrenStyle'],
+                    children = cardFooterFunction(title, projectData, feedData)
+
+                )
+
+                # >
+
+            ]
+
+        )
+
+        # >
+
+    )
+
+    # >
+
+
+def cardHeaderFunction(title: str, projectData: dict, feedData: dict):
+    '''  '''
+
+    # output <
+    return (
+
+        # title <
+        # description <
+        html.H4(title.replace('-', ' ')),
+        html.Small(html.Small(projectData[title]['description'])),
+
+        # >
+
+        html.Hr()
+
+    )
+
+    # >
+
+
+def cardBodyFunction(title: str, projectData: dict, feedData: dict):
+    '''  '''
+
+    # output <
+    return (
+
+        #
+
+    )
+
+    # >
+
+
+def cardFooterFunction(title: str, projectData: dict, feedData: dict):
+    '''  '''
+
+    # output <
+    return (
+
+        html.Hr(),
+
+        dbc.Row(
+
+            justify = 'between',
+            children = [
+
+                # feed <
+                dbc.Col(
+
+                    width = 'auto',
                     children = [
 
-                        html.Hr(),
+                        dbc.CardLink(
 
-                        dbc.Row(
+                            href = f'/{title}',
+                            style = myProjectStyle['footerCardLinkStyle'],
+                            children = '{} ⇾'.format(title.replace('-', ' '))
 
-                            justify = 'between',
+                        )
+
+                    ]
+
+                ),
+
+                # >
+
+                # link <
+                dbc.Col(
+
+                    width = 'auto',
+                    children = [
+
+                        html.A(
+
+                            href = projectData[title]['link'],
                             children = [
 
-                                # feed <
-                                dbc.Col(
+                                html.Img(
 
-                                    width = 'auto',
-                                    children = [
-
-                                        dbc.CardLink(
-
-                                            href = f'/{title}',
-                                            style = myProjectStyle['footerCardLinkStyle'],
-                                            children = '{} ⇾'.format(title.replace('-', ' '))
-
-                                        )
-
-                                    ]
-
-                                ),
-
-                                # >
-
-                                # link <
-                                dbc.Col(
-
-                                    width = 'auto',
-                                    children = [
-
-                                        html.A(
-
-                                            href = data[title]['link'],
-                                            children = [
-
-                                                html.Img(
-
-                                                    src = myProjectStyle['linkImgSrc'],
-                                                    style = myProjectStyle['linkImgStyle']
-
-                                                )
-
-                                            ]
-
-                                        )
-
-                                    ]
+                                    src = myProjectStyle['linkImgSrc'],
+                                    style = myProjectStyle['linkImgStyle']
 
                                 )
-
-                                # >
 
                             ]
 
@@ -223,8 +242,6 @@ def myProjectFunction(title: str, data: dict):
             ]
 
         )
-
-        # >
 
     )
 
