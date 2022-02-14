@@ -12,9 +12,9 @@
   },
   "rowStyle" : {
     "margin" : "1%",
-    "paddingTop" : 20,
+    "paddingTop" : 22,
     "borderRadius" : 10,
-    "paddingBottom" : 20,
+    "paddingBottom" : 22,
     "border" : "2px solid rgb(17,17,17)",
     "backgroundColor" : "rgba(17,17,17,0.5)"
   },
