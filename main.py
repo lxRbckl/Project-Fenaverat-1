@@ -4,7 +4,6 @@
 # import <
 from backend.utility import application
 from frontend.layout.frame import frameLayout
-from backend.scrape import scrapeMyProject, scrapeAboutMe # remove
 
 # >
 

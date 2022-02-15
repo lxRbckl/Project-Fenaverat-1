@@ -1,3 +1,18 @@
 {
-
+  "cardStyle" : {
+    "padding" : "1%",
+    "borderRadius" : 10,
+    "border" : "3px solid #111111",
+    "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "cardImgStyle" : {
+    "borderRadius" : 10
+  },
+  "cardBodyStyle" : {
+    "padding" : 0,
+    "paddingTop" : "1%",
+    "color" : "#F8F0E3",
+    "borderRadius" : 10,
+    "backgroundColor" : "rgba(17,17,17,1)"
+  }
 }

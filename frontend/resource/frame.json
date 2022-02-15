@@ -15,7 +15,7 @@
     "paddingTop" : 20,
     "borderRadius" : 10,
     "paddingBottom" : 20,
-    "border" : "2px solid rgb(17,17,17)",
+    "border" : "3px solid rgb(17,17,17)",
     "backgroundColor" : "rgba(17,17,17,0.5)"
   },
   "headerImgStyle" : {
@@ -28,12 +28,15 @@
   "bodyRowStyle" : {
     "margin" : "1%",
     "borderRadius" : 10,
-    "border" : "2px solid rgb(17,17,17)",
+    "border" : "3px solid rgb(17,17,17)",
     "backgroundColor" : "rgba(17,17,17,0.5)"
   },
   "footerImgStyle" : {
     "height" : 40,
     "marginLeft" : "5vh",
     "marginRight" : "5vh"
+  },
+  "feedRowStyle" : {
+    "margin" : "1%"
   }
 }

@@ -27,6 +27,10 @@
     "marginBottom" : 4,
     "color" : "#111111"
   },
+  "subjectFilter" : [
+    "header",
+    "image"
+  ],
   "footerSpacerHrStyle" : {
     "marginTop" : 0,
     "marginBottom" : 7

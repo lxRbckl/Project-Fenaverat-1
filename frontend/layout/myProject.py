@@ -1,5 +1,5 @@
 # import <
-from dash import html
+from dash import html, dcc
 from os import listdir
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
@@ -25,7 +25,7 @@ myProjectLayout = (
         justify = 'center',
         id = 'myProjectBoardRowId'
 
-    )
+    ),
 
     # >
 
@@ -173,13 +173,14 @@ def cardBodyFunction(title: str, projectData: dict, feedData: dict):
 
         dbc.Badge(
 
-            children = subject,
+            children = subject.title(),
             color = myProjectStyle['bodyBadgeColor'],
             style = myProjectStyle['bodyBadgeStyle']
 
         )
 
-    for subject in feedData[f'{title}.json'].keys()]
+    for subject in feedData[f'{title}.json'].keys()
+    if (subject not in myProjectStyle['subjectFilter'])]
 
     # >
 
@@ -192,6 +193,8 @@ def cardFooterFunction(title: str, projectData: dict, feedData: dict):
 
         spacer = None
         feed = None
+
+    # >
 
     # else (feed) <
     else:

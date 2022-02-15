@@ -180,7 +180,7 @@ def frameCallback(pathname: str):
         # output <
         return (
 
-            frameStyle['bodyRowStyle'],
+            frameStyle['feedRowStyle'],
             feedFunction(
 
                 title = pathname.replace('/', ''),
