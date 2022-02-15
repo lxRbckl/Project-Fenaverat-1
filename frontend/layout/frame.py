@@ -1,27 +1,30 @@
 # import <
+from os import listdir
 from dash import html, dcc
 import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output
+from frontend.layout.feed import feedFunction
 from frontend.layout.aboutMe import aboutMeLayout
-from dash.dependencies import Input, Output, State
 from frontend.layout.myServer import myServerLayout
 from frontend.layout.myProject import myProjectLayout
-from backend.utility import application, jsonLoad, jsonDump
+from backend.utility import application, jsonLoad, realpath
 
 # >
 
 
 # global <
-bodyData = jsonLoad(file = '/frontend/data/frame.json')
-bodyStyle = jsonLoad(file = '/frontend/resource/frame.json')
+
+frameData = jsonLoad(file ='/frontend/data/frame.json')
+frameStyle = jsonLoad(file ='/frontend/resource/frame.json')
 
 # >
 
 
 # frame <
-bodyLayout = dbc.Container(
+frameLayout = dbc.Container(
 
     fluid = True,
-    style = bodyStyle['containerStyle'],
+    style = frameStyle['containerStyle'],
     children = [
 
         dcc.Location(id = 'frameLocationId'),
@@ -31,13 +34,13 @@ bodyLayout = dbc.Container(
 
             id = 'headerRowId',
             justify = 'center',
-            style = bodyStyle['rowStyle'],
+            style = frameStyle['rowStyle'],
             children = [
 
                 html.Img(
 
-                    src = bodyData['headerImgSrc'],
-                    style = bodyStyle['headerImgStyle']
+                    src = frameData['headerImgSrc'],
+                    style = frameStyle['headerImgStyle']
 
                 )
 
@@ -52,7 +55,7 @@ bodyLayout = dbc.Container(
 
             id = 'menuRowId',
             justify = 'center',
-            style = bodyStyle['rowStyle'],
+            style = frameStyle['rowStyle'],
             children = [
 
                 dbc.ButtonGroup(
@@ -70,7 +73,7 @@ bodyLayout = dbc.Container(
                                 html.Img(
 
                                     src = image,
-                                    style = bodyStyle['menuImgStyle']
+                                    style = frameStyle['menuImgStyle']
 
                                 )
 
@@ -78,7 +81,7 @@ bodyLayout = dbc.Container(
 
                         )
 
-                    for key, image in bodyData['menuButtonGroupValue'].items()]
+                    for key, image in frameData['menuButtonGroupValue'].items()]
 
                 )
 
@@ -93,7 +96,7 @@ bodyLayout = dbc.Container(
 
             id = 'bodyRowId',
             justify = 'center',
-            style = bodyStyle['bodyRowStyle']
+            style = frameStyle['bodyRowStyle']
 
         ),
 
@@ -104,7 +107,7 @@ bodyLayout = dbc.Container(
 
             id = 'footerRowId',
             justify = 'center',
-            style = bodyStyle['rowStyle'],
+            style = frameStyle['rowStyle'],
             children = [
 
                 # image <
@@ -121,7 +124,7 @@ bodyLayout = dbc.Container(
                                 html.Img(
 
                                     src = image,
-                                    style = bodyStyle['footerImgStyle']
+                                    style = frameStyle['footerImgStyle']
 
                                 )
 
@@ -135,7 +138,7 @@ bodyLayout = dbc.Container(
 
                 # >
 
-            for link, image in bodyData['footerRowValue'].items()]
+            for link, image in frameData['footerRowValue'].items()]
 
         )
 
@@ -152,29 +155,42 @@ bodyLayout = dbc.Container(
 @application.callback(Output('bodyRowId', 'style'),
                       Output('bodyRowId', 'children'),
                       Input('frameLocationId', 'pathname'))
-def frameCallback(path: str):
+def frameCallback(pathname: str):
     '''  '''
 
-    print(path) # remove
-
     # local <
+    path = '/'.join(realpath.split('/')[:-2]) + '/frontend/data/feed'
+    feed = {t : jsonLoad(f'/frontend/data/feed/{t}') for t in listdir(path)}
     layoutDict = {
 
-        '/' : (bodyStyle['rowStyle'], aboutMeLayout),
-        '/aboutMe' : (bodyStyle['rowStyle'], aboutMeLayout),
-        '/myServer' : (bodyStyle['bodyRowStyle'], myServerLayout),
-        '/myProject' : (bodyStyle['bodyRowStyle'], myProjectLayout)
+        '/' : (frameStyle['rowStyle'], aboutMeLayout),
+        '/aboutMe' : (frameStyle['rowStyle'], aboutMeLayout),
+        '/myServer' : (frameStyle['bodyRowStyle'], myServerLayout),
+        '/myProject' : (frameStyle['bodyRowStyle'], myProjectLayout)
 
     }
 
     # >
 
     # if (page) <
-    # else (feed) <
-    if (path in layoutDict.keys()): return layoutDict[path]
-    else:
+    # elif (feed) <
+    if (pathname in layoutDict.keys()): return layoutDict[pathname]
+    elif ((pathname.replace('/', '') + '.json') in feed.keys()):
 
-        return None
+        # output <
+        return (
+
+            frameStyle['bodyRowStyle'],
+            feedFunction(
+
+                title = pathname.replace('/', ''),
+                data = feed[pathname.replace('/', '') + '.json']
+
+            )
+
+        )
+
+        # >
 
     # >
 

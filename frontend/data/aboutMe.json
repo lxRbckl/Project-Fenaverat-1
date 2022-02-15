@@ -11,22 +11,6 @@
       "lxRbckl",
       "ala2q6"
    ],
-   "ala2q6": {
-      "topic": [],
-      "language": [
-         "Python",
-         "Python",
-         "Python",
-         "Clojure",
-         "C++",
-         "C++",
-         "C++",
-         "C++",
-         "C++",
-         "C++",
-         "C++"
-      ]
-   },
    "lxRbckl": {
       "topic": [
          "asyncio",
@@ -88,6 +72,7 @@
       "language": [
          "Python",
          "Python",
+         "Python",
          "Shell",
          "Python",
          "Shell",
@@ -107,6 +92,22 @@
          "Python",
          "Python",
          "Python"
+      ]
+   },
+   "ala2q6": {
+      "topic": [],
+      "language": [
+         "Python",
+         "Python",
+         "Python",
+         "Clojure",
+         "C++",
+         "C++",
+         "C++",
+         "C++",
+         "C++",
+         "C++",
+         "C++"
       ]
    }
 }

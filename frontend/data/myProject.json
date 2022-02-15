@@ -1,84 +1,7 @@
 {
-   "ala2q6": {
-      "queue": [
-         "ala2q6",
-         "CS461P3",
-         "CS461P2",
-         "CS461P1",
-         "CS441P2",
-         "CS201RP5",
-         "CS201RP4",
-         "CS201RP2",
-         "CS201RP1",
-         "CS201RP3",
-         "CS303P1",
-         "CS303P2"
-      ],
-      "project": {
-         "ala2q6": {
-            "hide": true,
-            "description": "Config files for my GitHub profile.",
-            "link": "https://github.com/ala2q6/ala2q6"
-         },
-         "CS461P3": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS461: Project 3",
-            "link": "https://github.com/ala2q6/CS461P3"
-         },
-         "CS461P2": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS461: Project 2",
-            "link": "https://github.com/ala2q6/CS461P2"
-         },
-         "CS461P1": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS461: Project 1",
-            "link": "https://github.com/ala2q6/CS461P1"
-         },
-         "CS441P2": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS441: Project 2",
-            "link": "https://github.com/ala2q6/CS441P2"
-         },
-         "CS201RP5": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS201R: Project 5",
-            "link": "https://github.com/ala2q6/CS201RP5"
-         },
-         "CS201RP4": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS201R: Project 4",
-            "link": "https://github.com/ala2q6/CS201RP4"
-         },
-         "CS201RP2": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS201R: Project 2",
-            "link": "https://github.com/ala2q6/CS201RP2"
-         },
-         "CS201RP1": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS201R: Project 1",
-            "link": "https://github.com/ala2q6/CS201RP1"
-         },
-         "CS201RP3": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS201R: Project 3",
-            "link": "https://github.com/ala2q6/CS201RP3"
-         },
-         "CS303P1": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS303: Project 1",
-            "link": "https://github.com/ala2q6/CS303P1"
-         },
-         "CS303P2": {
-            "hide": true,
-            "description": "University of Missouri - Kansas City: CS303: Project 2",
-            "link": "https://github.com/ala2q6/CS303P2"
-         }
-      }
-   },
    "lxRbckl": {
       "queue": [
+         "Project-Fenaverat",
          "Project-UMKC-2",
          "Project-Maximus",
          "lxRbckl",
@@ -101,6 +24,11 @@
          "Project-PasCam-1"
       ],
       "project": {
+         "Project-Fenaverat": {
+            "hide": false,
+            "description": "description",
+            "link": "https://github.com/lxRbckl/Project-Fenaverat"
+         },
          "Project-UMKC-2": {
             "hide": false,
             "description": "Receive a Discord notification when your Zoom classes start. Fall 2021.",
@@ -112,7 +40,7 @@
             "link": "https://github.com/lxRbckl/Project-Maximus"
          },
          "lxRbckl": {
-            "hide": true,
+            "hide": false,
             "description": "Config files for my GitHub profile.",
             "link": "https://github.com/lxRbckl/lxRbckl"
          },
@@ -200,6 +128,84 @@
             "hide": false,
             "description": "Camouflage your passwords. Spring 2019.",
             "link": "https://github.com/lxRbckl/Project-PasCam-1"
+         }
+      }
+   },
+   "ala2q6": {
+      "queue": [
+         "ala2q6",
+         "CS461P3",
+         "CS461P2",
+         "CS461P1",
+         "CS441P2",
+         "CS201RP5",
+         "CS201RP4",
+         "CS201RP2",
+         "CS201RP1",
+         "CS201RP3",
+         "CS303P1",
+         "CS303P2"
+      ],
+      "project": {
+         "ala2q6": {
+            "hide": false,
+            "description": "Config files for my GitHub profile.",
+            "link": "https://github.com/ala2q6/ala2q6"
+         },
+         "CS461P3": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS461: Project 3",
+            "link": "https://github.com/ala2q6/CS461P3"
+         },
+         "CS461P2": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS461: Project 2",
+            "link": "https://github.com/ala2q6/CS461P2"
+         },
+         "CS461P1": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS461: Project 1",
+            "link": "https://github.com/ala2q6/CS461P1"
+         },
+         "CS441P2": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS441: Project 2",
+            "link": "https://github.com/ala2q6/CS441P2"
+         },
+         "CS201RP5": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS201R: Project 5",
+            "link": "https://github.com/ala2q6/CS201RP5"
+         },
+         "CS201RP4": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS201R: Project 4",
+            "link": "https://github.com/ala2q6/CS201RP4"
+         },
+         "CS201RP2": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS201R: Project 2",
+            "link": "https://github.com/ala2q6/CS201RP2"
+         },
+         "CS201RP1": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS201R: Project 1",
+            "link": "https://github.com/ala2q6/CS201RP1"
+         },
+         "CS201RP3": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS201R: Project 3",
+            "link": "https://github.com/ala2q6/CS201RP3"
+         },
+         "CS303P1": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS303: Project 1",
+            "link": "https://github.com/ala2q6/CS303P1"
+         },
+         "CS303P2": {
+            "hide": false,
+            "description": "University of Missouri - Kansas City: CS303: Project 2",
+            "link": "https://github.com/ala2q6/CS303P2"
          }
       }
    }

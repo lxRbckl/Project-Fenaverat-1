@@ -1,6 +1,6 @@
 # import <
+from dash import html
 from os import listdir
-from dash import html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 from backend.utility import application, jsonLoad, realpath
