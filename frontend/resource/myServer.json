@@ -19,13 +19,11 @@
     "marginBottom" : 0,
     "color" : "#F8F0E3"
   },
-  "taskListGroupStyle" : {
-    "backgroundColor" : "#F8F0E3"
-  },
   "taskListGroupItem" : {
     "padding" : 2,
     "paddingLeft" : 10,
     "color" : "#111111",
-    "fontWeight" : "bold"
+    "fontWeight" : "bold",
+    "backgroundColor" : "#F8F0E3"
   }
 }
