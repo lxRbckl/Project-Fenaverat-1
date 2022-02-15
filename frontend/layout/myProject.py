@@ -114,19 +114,15 @@ def myProjectFunction(title: str, projectData: dict, feedData: dict):
 
                 # >
 
-                html.Hr(style = myProjectStyle['cardHrStyle']),
-
                 # body <
                 dbc.CardBody(
 
-                    style = myProjectStyle['cardChildrenStyle'],
+                    style = myProjectStyle['bodyCardBodyStyle'],
                     children = cardBodyFunction(title, projectData, feedData)
 
                 ),
 
                 # >
-
-                html.Hr(style = myProjectStyle['cardHrStyle']),
 
                 # footer <
                 dbc.CardFooter(
@@ -157,8 +153,10 @@ def cardHeaderFunction(title: str, projectData: dict, feedData: dict):
 
         # title <
         # description <
+        # spacer <
         html.H4(title.replace('-', ' ')),
-        html.Small(html.Small(projectData[title]['description']))
+        html.Small(html.Small(projectData[title]['description'])),
+        html.Hr(style = myProjectStyle['headerSpacerHrStyle'])
 
         # >
 
@@ -190,10 +188,15 @@ def cardFooterFunction(title: str, projectData: dict, feedData: dict):
     '''  '''
 
     # if (no feed) <
+    if (not feedData[f'{title}.json'].keys()):
+
+        spacer = None
+        feed = None
+
     # else (feed) <
-    if (not feedData[f'{title}.json'].keys()): feed = None
     else:
 
+        spacer = html.Hr(style = myProjectStyle['footerSpacerHrStyle'])
         feed = dbc.CardLink(
 
             href = f'/{title}',
@@ -206,6 +209,8 @@ def cardFooterFunction(title: str, projectData: dict, feedData: dict):
 
     # output <
     return (
+
+        spacer,
 
         dbc.Row(
 
@@ -252,7 +257,7 @@ def cardFooterFunction(title: str, projectData: dict, feedData: dict):
 
             ]
 
-        )
+        ),
 
     )
 
