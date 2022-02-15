@@ -8,9 +8,10 @@
   },
   "Raspberry Pi 3" : {
     "hide" : false,
-    "status" : "On",
+    "status" : "Off",
     "running" : [
-      "PasCam 6"
+      "PasCam 6",
+      "Fenaverat"
     ]
   },
   "Raspberry Pi 2" : {

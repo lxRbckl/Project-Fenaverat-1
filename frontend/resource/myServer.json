@@ -9,5 +9,23 @@
     "color" : "#F8F0E3",
     "borderRadius" : 10,
     "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "online" : "#1DB954",
+  "offline" : "#900D09",
+  "statusIndicatorStyle" : {
+    "whiteSpace" : "breakSpace"
+  },
+  "spacerHrStyle" : {
+    "marginBottom" : 0,
+    "color" : "#F8F0E3"
+  },
+  "taskListGroupStyle" : {
+    "backgroundColor" : "#F8F0E3"
+  },
+  "taskListGroupItem" : {
+    "padding" : 2,
+    "paddingLeft" : 10,
+    "color" : "#111111",
+    "fontWeight" : "bold"
   }
 }

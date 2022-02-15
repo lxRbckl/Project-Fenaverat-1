@@ -1,4 +1,5 @@
 # import <
+import dash_daq as daq
 from dash import html, dcc
 import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
@@ -123,10 +124,30 @@ def myServerFunction(node: str, serverData: dict):
 def cardHeaderFunction(node: str, serverData: dict):
     '''  '''
 
+    # if (online) <
+    # else (offline) <
+    if (serverData[node]['status'] == 'On'): status = myServerStyle['online']
+    else: status = myServerStyle['offline']
+
+    # >
+
     # output <
     return (
 
-        html.H4(node)
+        # title <
+        # status <
+        # spacer <
+        html.H4(node),
+        daq.Indicator(
+
+            style = myServerStyle['statusIndicatorStyle'],
+            color = status,
+            size = 10
+
+        ),
+        html.Hr(style = myServerStyle['spacerHrStyle'])
+
+        # >
 
     )
 
@@ -139,7 +160,24 @@ def cardBodyFunction(node: str, serverData: dict):
     # output <
     return (
 
+        # task <
+        dbc.ListGroup(
 
+            style = myServerStyle['taskListGroupStyle'],
+            children = [
+
+                dbc.ListGroupItem(
+
+                    children = html.Small(task),
+                    style = myServerStyle['taskListGroupItem']
+
+                )
+
+            for task in serverData[node]['running']]
+
+        )
+
+        # >
 
     )
 
