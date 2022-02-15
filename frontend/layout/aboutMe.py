@@ -68,6 +68,7 @@ aboutMeLayout = (
                                     # header <
                                     # body <
                                     html.H4(aboutMeData['biographyH4Children']),
+                                    html.Hr(),
                                     html.P(aboutMeData['biographyPChildren'])
 
                                     # >
