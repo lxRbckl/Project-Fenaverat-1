@@ -66,9 +66,10 @@ aboutMeLayout = (
                                 children = [
 
                                     # header <
+                                    # spacer <
                                     # body <
                                     html.H4(aboutMeData['biographyH4Children']),
-                                    html.Hr(),
+                                    html.Hr(style = aboutMeStyle['spacerHrStyle']),
                                     html.P(aboutMeData['biographyPChildren'])
 
                                     # >
@@ -131,7 +132,7 @@ aboutMeLayout = (
                                     daq.Indicator(
 
                                         color = aboutMeStyle['statusIndicatorColor'],
-                                        size = 10
+                                        size = 7
 
                                     ),
 
@@ -182,7 +183,7 @@ aboutMeLayout = (
                                     daq.Indicator(
 
                                         color = aboutMeStyle['statusIndicatorColor'],
-                                        size = 10
+                                        size = 7
 
                                     ),
 

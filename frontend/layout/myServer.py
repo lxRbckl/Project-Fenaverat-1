@@ -135,14 +135,14 @@ def cardHeaderFunction(node: str, serverData: dict):
     return (
 
         # title <
-        # OS <
+        # description <
         html.H4(
 
             children = node,
             style = myServerStyle['titleH4Style']
 
         ),
-        html.Small(serverData[node]['OS']),
+        html.Small(serverData[node]['description']),
 
         # >
 
@@ -152,7 +152,7 @@ def cardHeaderFunction(node: str, serverData: dict):
 
             style = myServerStyle['statusIndicatorStyle'],
             color = status,
-            size = 10
+            size = 7
 
         ),
         html.Hr(style = myServerStyle['spacerHrStyle'])
@@ -170,17 +170,19 @@ def cardBodyFunction(node: str, serverData: dict):
     # output <
     return (
 
-        # task <
         dbc.ListGroup(
 
             children = [
 
+                # task <
                 dbc.ListGroupItem(
 
                     children = html.Small(task),
                     style = myServerStyle['taskListGroupItem']
 
                 )
+
+                # >
 
             for task in serverData[node]['running']]
 

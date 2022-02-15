@@ -17,10 +17,16 @@
     "border" : "2px solid rgb(17,17,17)",
     "backgroundColor" : "rgba(17,17,17,1)"
   },
+  "spacerHrStyle" : {
+    "marginTop" : 0,
+    "marginBottom" : 10
+  },
   "graphColStyle" : {
     "paddingTop" : 20
   },
   "graphCardStyle" : {
+    "marginTop" : 2,
+    "marginBottom" : 2,
     "borderRadius" : 10,
     "backgroundColor" : "rgba(17,17,17,1)"
   },

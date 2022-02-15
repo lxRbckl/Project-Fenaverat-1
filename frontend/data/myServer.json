@@ -2,7 +2,7 @@
   "Raspberry Pi 1" : {
     "hide" : false,
     "status" : "On",
-    "OS" : "Ubuntu",
+    "description" : "Ubuntu",
     "running" : [
       "PasCam 6"
     ]
@@ -10,7 +10,7 @@
   "Raspberry Pi 3" : {
     "hide" : false,
     "status" : "Off",
-    "OS" : "Ubuntu",
+    "description" : "Ubuntu",
     "running" : [
       "PasCam 6",
       "Fenaverat"
@@ -19,7 +19,7 @@
   "Raspberry Pi 2" : {
     "hide" : false,
     "status" : "On",
-    "OS" : "Ubuntu",
+    "description" : "Ubuntu",
     "running" : [
       "PasCam 6"
     ]
@@ -27,7 +27,7 @@
   "Raspberry Pi 15" : {
     "hide" : false,
     "status" : "On",
-    "OS" : "Ubuntu",
+    "description" : "Ubuntu",
     "running" : [
       "PasCam 6"
     ]

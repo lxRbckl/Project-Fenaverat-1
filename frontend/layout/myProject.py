@@ -170,32 +170,39 @@ def cardHeaderFunction(title: str, projectData: dict, feedData: dict):
 def cardBodyFunction(title: str, projectData: dict, feedData: dict):
     '''  '''
 
-    # if (empty) <
-    try:
+    # output <
+    return [
 
-        # output <
-        return [
+        dbc.Badge(
 
-            dbc.Badge(
+            children = subject,
+            color = myProjectStyle['bodyBadgeColor'],
+            style = myProjectStyle['bodyBadgeStyle']
 
-                children = subject,
-                color = myProjectStyle['bodyBadgeColor'],
-                style = myProjectStyle['bodyBadgeStyle']
+        )
 
-            )
-
-        for subject in feedData[f'{title}.json'].keys()]
-
-    # >
-
-    # else (not empty) <
-    except KeyError: return None
+    for subject in feedData[f'{title}.json'].keys()]
 
     # >
 
 
 def cardFooterFunction(title: str, projectData: dict, feedData: dict):
     '''  '''
+
+    # if (no feed) <
+    # else (feed) <
+    if (not feedData[f'{title}.json'].keys()): feed = None
+    else:
+
+        feed = dbc.CardLink(
+
+            href = f'/{title}',
+            style = myProjectStyle['footerCardLinkStyle'],
+            children = '{} ⇾'.format(title.replace('-', ' '))
+
+        )
+
+    # >
 
     # output <
     return (
@@ -209,17 +216,7 @@ def cardFooterFunction(title: str, projectData: dict, feedData: dict):
                 dbc.Col(
 
                     width = 'auto',
-                    children = [
-
-                        dbc.CardLink(
-
-                            href = f'/{title}',
-                            style = myProjectStyle['footerCardLinkStyle'],
-                            children = '{} ⇾'.format(title.replace('-', ' '))
-
-                        )
-
-                    ]
+                    children = feed
 
                 ),
 
