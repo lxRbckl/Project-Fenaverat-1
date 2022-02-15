@@ -12,8 +12,11 @@
   },
   "online" : "#1DB954",
   "offline" : "#900D09",
+  "titleH4Style" : {
+    "marginBottom" : 0
+  },
   "statusIndicatorStyle" : {
-    "whiteSpace" : "breakSpace"
+    "paddingTop" : 10
   },
   "spacerHrStyle" : {
     "marginBottom" : 0,

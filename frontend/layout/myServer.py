@@ -137,7 +137,13 @@ def cardHeaderFunction(node: str, serverData: dict):
         # title <
         # status <
         # spacer <
-        html.H4(node),
+        html.H4(
+
+            children = node,
+            style = myServerStyle['titleH4Style']
+
+        ),
+        html.Small(serverData[node]['OS']),
         daq.Indicator(
 
             style = myServerStyle['statusIndicatorStyle'],
@@ -148,6 +154,8 @@ def cardHeaderFunction(node: str, serverData: dict):
         html.Hr(style = myServerStyle['spacerHrStyle'])
 
         # >
+
+
 
     )
 
