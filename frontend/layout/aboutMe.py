@@ -128,13 +128,13 @@ aboutMeLayout = (
 
                                     # title <
                                     # status <
-                                    html.H6('Languages'),
-                                    daq.Indicator(
+                                    html.H6(
 
-                                        color = aboutMeStyle['statusIndicatorColor'],
-                                        size = 7
+                                        children = 'Language',
+                                        style = aboutMeStyle['titleH6Style']
 
                                     ),
+                                    html.Small(html.Small('Updated Hourly')),
 
                                     # >
 
@@ -179,13 +179,13 @@ aboutMeLayout = (
 
                                     # title <
                                     # status <
-                                    html.H6('Topics'),
-                                    daq.Indicator(
+                                    html.H6(
 
-                                        color = aboutMeStyle['statusIndicatorColor'],
-                                        size = 7
+                                        children = 'Topic',
+                                        style = aboutMeStyle['titleH6Style']
 
                                     ),
+                                    html.Small(html.Small('Updated Hourly')),
 
                                     # >
 

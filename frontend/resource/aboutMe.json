@@ -33,6 +33,9 @@
   "graphHeaderStyle" : {
     "color" : "#F8F0E3"
   },
+  "titleH6Style" : {
+    "margin" : 0
+  },
   "statusIndicatorColor" : "#1DB954",
   "figureLine" : {
     "width" : 0.5,
