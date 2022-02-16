@@ -1,6 +1,5 @@
 {
   "imageCardStyle" : {
-    "marginTop" : 2,
     "borderRadius" : 10,
     "border" : "3px solid rgb(17,17,17)",
     "backgroundColor" : "rgba(17,17,17,1)"
@@ -10,7 +9,6 @@
     "borderRadius" : 10
   },
   "biographyCardStyle" : {
-    "marginTop" : 2,
     "height" : "100%",
     "color" : "#F8F0E3",
     "borderRadius" : 10,
@@ -22,11 +20,9 @@
     "marginBottom" : 10
   },
   "graphColStyle" : {
-    "paddingTop" : 20
+    "paddingTop" : "1%"
   },
   "graphCardStyle" : {
-    "marginTop" : 4,
-    "marginBottom" : 4,
     "borderRadius" : 10,
     "backgroundColor" : "rgba(17,17,17,1)"
   },
