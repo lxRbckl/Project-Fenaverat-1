@@ -1,9 +1,10 @@
 # import <
 from time import sleep
+from os import mkdir, path
 from selenium import webdriver
-from backend.utility import jsonLoad, jsonDump
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from backend.utility import jsonLoad, jsonDump, directory
 from selenium.common.exceptions import NoSuchElementException
 
 # >
@@ -19,6 +20,14 @@ def scrapeMyProject(user: str) -> None:
     setting = jsonLoad(file = '/backend/scrape.json')['scrapeMyProject']
     myProjectData, queue = jsonLoad(file = '/frontend/data/myProject.json'), []
     driver = webdriver.Chrome(ChromeDriverManager().install())#, options = options)
+
+    # >
+
+    # if (feed directory DNE) <
+    # then create directory <
+    if (path.isdir(directory[1:] + '/frontend/data/feed') is False):
+
+        mkdir(path = directory + '/frontend')
 
     # >
 

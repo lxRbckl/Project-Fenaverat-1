@@ -3,7 +3,7 @@ from dash import html, dcc
 from os import listdir
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-from backend.utility import application, jsonLoad, realpath
+from backend.utility import application, jsonLoad, directory
 
 # >
 
@@ -41,8 +41,8 @@ def myProjectCallback(*args):
     '''  '''
 
     # local <
+    path = directory + '/frontend/data/feed'
     myProjectData = jsonLoad(file = '/frontend/data/myProject.json')
-    path = '/'.join(realpath.split('/')[:-2]) + '/frontend/data/feed'
     feed = {t : jsonLoad(f'/frontend/data/feed/{t}') for t in listdir(path)}
 
     # >

@@ -65,12 +65,12 @@ aboutMeLayout = (
 
                                 children = [
 
-                                    # header <
+                                    # title <
                                     # spacer <
-                                    # body <
-                                    html.H4(aboutMeData['biographyH4Children']),
+                                    # article <
+                                    html.H4(aboutMeData['biographyTitle']),
                                     html.Hr(style = aboutMeStyle['spacerHrStyle']),
-                                    html.P(aboutMeData['biographyPChildren'])
+                                    html.H6(dcc.Markdown([i for i in aboutMeData['biographyArticle']]))
 
                                     # >
 

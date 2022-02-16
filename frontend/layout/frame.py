@@ -7,7 +7,7 @@ from frontend.layout.feed import feedFunction
 from frontend.layout.aboutMe import aboutMeLayout
 from frontend.layout.myServer import myServerLayout
 from frontend.layout.myProject import myProjectLayout
-from backend.utility import application, jsonLoad, realpath
+from backend.utility import application, jsonLoad, directory
 
 # >
 
@@ -159,7 +159,7 @@ def frameCallback(pathname: str):
     '''  '''
 
     # local <
-    path = '/'.join(realpath.split('/')[:-2]) + '/frontend/data/feed'
+    path = directory + '/frontend/data/feed'
     feed = {t : jsonLoad(f'/frontend/data/feed/{t}') for t in listdir(path)}
     layoutDict = {
 

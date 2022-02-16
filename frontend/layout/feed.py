@@ -21,7 +21,7 @@ def feedFunction(title: str, data: dict):
     '''  '''
 
     # local <
-    feed = []
+    feed = [linkFunction()]
 
     # >
 
@@ -46,6 +46,37 @@ def feedFunction(title: str, data: dict):
             children = [post for post in feed]
 
         )
+
+    )
+
+    # >
+
+
+def linkFunction():
+    '''  '''
+
+    # output <
+    return (
+
+        # back <
+        dbc.CardBody(
+
+            style = feedStyle['backCardBodyStyle'],
+            children = [
+
+                dbc.CardLink(
+
+                    href = '/myProject',
+                    children = '⇽ Go Back',
+                    style = feedStyle['backCardLinkStyle']
+
+                )
+
+            ]
+
+        )
+
+        # >
 
     )
 

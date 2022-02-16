@@ -16,5 +16,16 @@
     "color" : "#F8F0E3",
     "borderRadius" : 10,
     "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "backCardBodyStyle" : {
+    "padding" : 0,
+    "paddingBottom" : "1%",
+    "color" : "#F8F0E3",
+    "borderRadius" : 10,
+    "backgroundColor" : "rgba(17,17,17,1)"
+  },
+  "backCardLinkStyle" : {
+    "textDecoration" : "None",
+    "fontFamily" : "sans serif"
   }
 }
