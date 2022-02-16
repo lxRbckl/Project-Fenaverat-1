@@ -1,10 +1,7 @@
 # import <
-import dash_daq as daq
 from dash import html, dcc
-import plotly.graph_objects as go
+from backend.utility import jsonLoad
 import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output
-from backend.utility import application, jsonLoad, jsonDump
 
 # >
 
