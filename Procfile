@@ -1,1 +1,1 @@
-web: gunicorn feed:server
+web: gunicorn frontend.layout.frame:server

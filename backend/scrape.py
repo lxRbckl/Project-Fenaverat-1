@@ -11,6 +11,24 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 # function <
+def scrapeFunction():
+    '''  '''
+
+    # local <
+    aboutMeData = jsonLoad(file = '/frontend/data/aboutMe.json')
+
+    # >
+
+    # iterate (user) <
+    for user in aboutMeData['users']:
+
+        scrapeMyProject(user)
+        scrapeAboutMe(user)
+
+    # >
+
+
+
 def scrapeMyProject(user: str) -> None:
     '''  '''
 
@@ -23,11 +41,10 @@ def scrapeMyProject(user: str) -> None:
 
     # >
 
-    # if (feed directory DNE) <
-    # then create directory <
-    if (path.isdir(directory[1:] + '/frontend/data/feed') is False):
-
-        mkdir(path = directory + '/frontend')
+    # try (if feed directory DNE) <
+    # except (then feed directory) <
+    try: mkdir(path = directory + '/frontend/data/feed')
+    except FileExistsError: pass
 
     # >
 
