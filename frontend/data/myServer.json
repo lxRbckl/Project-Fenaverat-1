@@ -1,35 +1,3 @@
 {
-  "Raspberry Pi 1" : {
-    "hide" : false,
-    "status" : "On",
-    "description" : "Ubuntu",
-    "running" : [
-      "PasCam 6"
-    ]
-  },
-  "Raspberry Pi 3" : {
-    "hide" : false,
-    "status" : "Off",
-    "description" : "Ubuntu",
-    "running" : [
-      "PasCam 6",
-      "Fenaverat"
-    ]
-  },
-  "Raspberry Pi 2" : {
-    "hide" : false,
-    "status" : "On",
-    "description" : "Ubuntu",
-    "running" : [
-      "PasCam 6"
-    ]
-  },
-  "Raspberry Pi 15" : {
-    "hide" : false,
-    "status" : "On",
-    "description" : "Ubuntu",
-    "running" : [
-      "PasCam 6"
-    ]
-  }
+
 }

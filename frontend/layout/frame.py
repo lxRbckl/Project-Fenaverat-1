@@ -119,6 +119,7 @@ frameLayout = dbc.Container(
                         html.A(
 
                             href = link,
+                            target = "_blank",
                             children = [
 
                                 html.Img(
