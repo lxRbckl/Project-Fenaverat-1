@@ -21,7 +21,7 @@ frameStyle = jsonLoad(file ='/frontend/resource/frame.json')
 
 
 # frame <
-frameLayout = dbc.Container(
+application.layout = dbc.Container(
 
     fluid = True,
     style = frameStyle['containerStyle'],
@@ -194,5 +194,13 @@ def frameCallback(pathname: str):
         # >
 
     # >
+
+# >
+
+
+# main <
+if (__name__ == '__main__'):
+
+    application.run_server(debug = True)
 
 # >

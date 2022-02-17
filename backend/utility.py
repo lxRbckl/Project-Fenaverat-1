@@ -16,6 +16,7 @@ application = Dash(
     external_stylesheets = [dbc.themes.BOOTSTRAP]
 
 )
+server = application.server
 
 # >
 
