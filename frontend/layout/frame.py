@@ -2,7 +2,6 @@
 from os import listdir
 from dash import html, dcc
 import dash_bootstrap_components as dbc
-from backend.scrape import scrapeFunction
 from dash.dependencies import Input, Output
 from frontend.layout.feed import feedFunction
 from frontend.layout.aboutMe import aboutMeLayout
