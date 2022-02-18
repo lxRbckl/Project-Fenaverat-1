@@ -30,7 +30,8 @@
     "color" : "#F8F0E3"
   },
   "titleH6Style" : {
-    "margin" : 0
+    "margin" : 0,
+    "paddingBottom" : "1%"
   },
   "statusIndicatorColor" : "#1DB954",
   "figureLine" : {

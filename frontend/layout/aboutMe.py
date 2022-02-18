@@ -1,5 +1,4 @@
 # import <
-import dash_daq as daq
 from dash import html, dcc
 import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
@@ -27,6 +26,7 @@ aboutMeLayout = (
             dbc.Col(
 
                 width = 'auto',
+                id = 'iamgeColId',
                 children = [
 
                     dbc.Card(
@@ -54,6 +54,7 @@ aboutMeLayout = (
             # biography <
             dbc.Col(
 
+                id = 'biographyColId',
                 children = [
 
                     dbc.Card(
@@ -97,20 +98,10 @@ aboutMeLayout = (
         # graph <
         children = [
 
-            # update <
-            dcc.Interval(
-
-                n_intervals = 0,
-                id = 'updateIntervalId',
-                interval = (3600 * 1000)
-
-            ),
-
-            # >
-
             # language <
             dbc.Col(
 
+                id = 'languageColId',
                 style = aboutMeStyle['graphColStyle'],
                 children = [
 
@@ -127,14 +118,14 @@ aboutMeLayout = (
                                 children = [
 
                                     # title <
-                                    # status <
+                                    # spacer <
                                     html.H6(
 
                                         children = 'Language',
                                         style = aboutMeStyle['titleH6Style']
 
                                     ),
-                                    html.Small(html.Small('Updated Hourly')),
+                                    html.Hr(style = aboutMeStyle['spacerHrStyle']),
 
                                     # >
 
@@ -164,6 +155,7 @@ aboutMeLayout = (
             # topic <
             dbc.Col(
 
+                id = 'topicColId',
                 style = aboutMeStyle['graphColStyle'],
                 children = [
 
@@ -178,14 +170,14 @@ aboutMeLayout = (
                                 children = [
 
                                     # title <
-                                    # status <
+                                    # spacer <
                                     html.H6(
 
                                         children = 'Topic',
                                         style = aboutMeStyle['titleH6Style']
 
                                     ),
-                                    html.Small(html.Small('Updated Hourly')),
+                                    html.Hr(style = aboutMeStyle['spacerHrStyle']),
 
                                     # >
 
@@ -222,7 +214,7 @@ aboutMeLayout = (
 # callback <
 @application.callback(Output('topicGraphId', 'figure'),
                       Output('languageGraphId', 'figure'),
-                      Input('updateIntervalId', 'n_intervals'))
+                      Input('languageColId', 'children'))
 def aboutMeCallback(*args):
     '''  '''
 
