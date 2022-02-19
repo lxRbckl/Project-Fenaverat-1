@@ -32,9 +32,7 @@
     "backgroundColor" : "rgba(17,17,17,0.5)"
   },
   "footerImgStyle" : {
-    "height" : 40,
-    "marginLeft" : "5vh",
-    "marginRight" : "5vh"
+    "height" : 40
   },
   "feedRowStyle" : {
     "margin" : "1%"

@@ -107,7 +107,7 @@ application.layout = dbc.Container(
         dbc.Row(
 
             id = 'footerRowId',
-            justify = 'center',
+            justify = 'evenly',
             style = frameStyle['rowStyle'],
             children = [
 
