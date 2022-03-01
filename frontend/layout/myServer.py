@@ -171,13 +171,14 @@ def cardBodyFunction(node: str, serverData: dict):
 
         dbc.ListGroup(
 
+            style = myServerStyle['taskListGroupStyle'],
             children = [
 
                 # task <
                 dbc.ListGroupItem(
 
                     children = html.Small(task),
-                    style = myServerStyle['taskListGroupItem']
+                    style = myServerStyle['taskListGroupItemStyle']
 
                 )
 

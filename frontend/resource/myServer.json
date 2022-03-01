@@ -22,7 +22,10 @@
     "marginBottom" : 0,
     "color" : "#F8F0E3"
   },
-  "taskListGroupItem" : {
+  "taskListGroupStyle" : {
+    "borderRadius" : 10
+  },
+  "taskListGroupItemStyle" : {
     "padding" : 2,
     "paddingLeft" : 10,
     "color" : "#111111",
