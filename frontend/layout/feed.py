@@ -14,7 +14,7 @@ myProjectStyle = jsonLoad(file = '/frontend/resource/myProject.json')
 
 
 # function <
-def feedFunction(title: str, data: dict):
+def feedFunction(data: dict):
     '''  '''
 
     # local <

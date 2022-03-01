@@ -8,7 +8,7 @@
     "backgroundSize" : "cover",
     "backgroundRepeat" : "no-repeat",
     "backgroundAttachment" : "fixed",
-    "backgroundImage": "url(https://cdn.discordapp.com/attachments/934690396037054537/934711158924009492/background.png)"
+    "backgroundImage": "url(https://cdn.discordapp.com/attachments/934690396037054537/945565037454569532/20210603_211322.jpg)"
   },
   "rowStyle" : {
     "margin" : "1%",
@@ -22,7 +22,7 @@
     "width" : 550
   },
   "menuImgStyle" : {
-    "height" : 40,
+    "height" : 45,
     "marginTop" : "1vh"
   },
   "bodyRowStyle" : {

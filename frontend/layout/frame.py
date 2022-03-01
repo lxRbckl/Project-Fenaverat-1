@@ -14,7 +14,6 @@ from backend.utility import application, server, jsonLoad, directory
 
 
 # global <
-
 frameData = jsonLoad(file ='/frontend/data/frame.json')
 frameStyle = jsonLoad(file ='/frontend/resource/frame.json')
 
@@ -183,12 +182,7 @@ def frameCallback(pathname: str):
         return (
 
             frameStyle['feedRowStyle'],
-            feedFunction(
-
-                title = pathname.replace('/', ''),
-                data = feed[pathname.replace('/', '') + '.json']
-
-            )
+            feedFunction(feed[pathname.replace('/', '') + '.json'])
 
         )
 
@@ -203,5 +197,6 @@ def frameCallback(pathname: str):
 if (__name__ == '__main__'):
 
     application.run_server(debug = True)
+    # scrapeFunction()
 
 # >
